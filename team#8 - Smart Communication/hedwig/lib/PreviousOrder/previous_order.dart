@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Current_order1 extends StatefulWidget {
+class Previous_order extends StatefulWidget {
   @override
-  _Current_order1State createState() => _Current_order1State();
+  _Previous_orderState createState() => _Previous_orderState();
 }
 
-class _Current_order1State extends State<Current_order1> {
+class _Previous_orderState extends State<Previous_order> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,8 +19,7 @@ class _Current_order1State extends State<Current_order1> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Image.network(
-                  "https://nzmaths.co.nz/sites/default/files/images/uploads/users/3/envelope_0.PNG"),
+              Image.asset("images/envelope.png"),
               Table(
                 children: _tableBuilder(),
               ),
@@ -33,21 +32,21 @@ class _Current_order1State extends State<Current_order1> {
 
   _tableBuilder() {
     return [
-      _tableRowBuilder("Order ID", "OIGS8G449DF"),
-      _tableRowBuilder("Sender's Name", "Mayank Bazari"),
+      _tableRowBuilder("Order ID", "D123456"),
+      _tableRowBuilder("Sender's Name", "Anvay Mishra"),
       _tableRowBuilder("Receiver's Name", "Mayank Ajmeri"),
       _tableRowBuilder(
           "Pick-up Location", "GEC Gandhinagar, Sector 28, Gandhinagar"),
       _tableRowBuilder("Drop Location", "IIITV Hostel, Prantij"),
       // _tableRowBuilder(
       //     "Receiver's Address", "Sabar Institute of Technology,Beawar"),
-      _tableRowBuilder("Package Type", "Parcel"),
-      _tableRowBuilder("Weight", "2.5 kg"),
+      _tableRowBuilder("Package Type", "Document"),
+      _tableRowBuilder("Weight", "75 gm"),
       _tableRowBuilder("Pick-up Time", "12:50"),
-      _tableRowBuilder("Pick-up Date", "6 October 2019"),
-      _tableRowBuilder("Expected Drop-Time", "15:57"),
-      _tableRowBuilder("Estimated Date", "6 October 2019"),
-      _tableRowBuilder("Handle with Care", "Yes"),
+      _tableRowBuilder("Pick-up Date", "2 October 2019"),
+      _tableRowBuilder("Drop-Time", "16:00"),
+      _tableRowBuilder("Delivery Date", "2 October 2019"),
+      _tableRowBuilder("Handle with Care", "No"),
       _tableRowBuilder("Grand Total", "Rs. 127"),
     ];
   }

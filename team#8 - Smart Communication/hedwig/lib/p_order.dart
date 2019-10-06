@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:hedwig/CurrentOrders/current_orders1.dart';
-import 'package:hedwig/CurrentOrders/current_orders.dart';
+import 'package:hedwig/PreviousOrder/previous_order1.dart';
+import 'package:hedwig/PreviousOrder/previous_order2.dart';
+import 'package:hedwig/PreviousOrder/previous_order.dart';
 
-class C_orders extends StatefulWidget {
+class P_orders extends StatefulWidget {
   @override
-  _C_ordersState createState() => _C_ordersState();
+  _P_ordersState createState() => _P_ordersState();
 }
 
-class _C_ordersState extends State<C_orders> {
+class _P_ordersState extends State<P_orders> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: Text("Current Orders"),
+        title: Text("Previous Orders"),
       ),
       body: Stack(children: <Widget>[
         Image(
@@ -29,35 +30,8 @@ class _C_ordersState extends State<C_orders> {
             Card(
               child: ListTile(
                 // isThreeLine: true,
-                title: Text("P987654"),
-                subtitle: Text("6 October 2019 9:50"),
-                enabled: true,
-                leading: Container(
-                  height: 60.0,
-                  width: 60.0,
-                  color: Colors.amberAccent[200],
-                  child: Center(
-                    child: Text(
-                      "P",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 25.0,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Current_order()),
-                  );
-                },
-              ),
-            ),
-            Card(
-              child: ListTile(
-                title: Text("D653289"),
-                subtitle: Text("6 October 2019 14:20"),
+                title: Text("D123456"),
+                subtitle: Text("2 October 2019 12:50"),
                 enabled: true,
                 leading: Container(
                   height: 60.0,
@@ -76,7 +50,61 @@ class _C_ordersState extends State<C_orders> {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Current_order1()),
+                    MaterialPageRoute(builder: (context) => Previous_order()),
+                  );
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text("P123242"),
+                subtitle: Text("28 August 2019 20:00"),
+                enabled: true,
+                leading: Container(
+                  height: 60.0,
+                  width: 60.0,
+                  color: Colors.amberAccent[200],
+                  child: Center(
+                    child: Text(
+                      "P",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Previous_order1()),
+                  );
+                },
+              ),
+            ),
+            Card(
+              child: ListTile(
+                title: Text("P156453"),
+                subtitle: Text("5 August 2019 10:00"),
+                enabled: true,
+                leading: Container(
+                  height: 60.0,
+                  width: 60.0,
+                  color: Colors.amberAccent[200],
+                  child: Center(
+                    child: Text(
+                      "P",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 25.0,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Previous_order2()),
                   );
                 },
               ),

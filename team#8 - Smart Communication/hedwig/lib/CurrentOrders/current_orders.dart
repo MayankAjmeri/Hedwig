@@ -19,10 +19,16 @@ class _Current_orderState extends State<Current_order> {
         child: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              Image.network(
-                  "https://webstockreview.net/images/clipart-bread-day-10.png"),
+              Image.asset("images/clipart-bread-day-10.png"),
               Table(
                 children: _tableBuilder(),
+              ),
+              Padding(
+              padding: const EdgeInsets.only(top : 15,bottom : 15,right : 250),
+              child : Image.asset("images/courier.png",height : 150 ,width : 150,alignment : Alignment.centerLeft ),
+              ),
+              Table(
+                children: _tableBuilder1(),
               ),
             ],
           ),
@@ -33,7 +39,7 @@ class _Current_orderState extends State<Current_order> {
 
   _tableBuilder() {
     return [
-      _tableRowBuilder("Order ID", "OIGS8G449DF"),
+      _tableRowBuilder("Order ID", "P987654"),
       _tableRowBuilder("Sender's Name", "Mayank Bazari"),
       _tableRowBuilder("Receiver's Name", "Mayank Ajmeri"),
       _tableRowBuilder(
@@ -43,12 +49,20 @@ class _Current_orderState extends State<Current_order> {
       //     "Receiver's Address", "Sabar Institute of Technology,Beawar"),
       _tableRowBuilder("Package Type", "Parcel"),
       _tableRowBuilder("Weight", "2.5 kg"),
-      _tableRowBuilder("Pick-up Time", "12:50"),
+      _tableRowBuilder("Pick-up Time", "9:50"),
       _tableRowBuilder("Pick-up Date", "6 October 2019"),
-      _tableRowBuilder("Expected Drop-Time", "15:57"),
+      _tableRowBuilder("Expected Drop-Time", "14:20"),
       _tableRowBuilder("Estimated Date", "6 October 2019"),
       _tableRowBuilder("Handle with Care", "Yes"),
-      _tableRowBuilder("Grand Total", "Rs. 127"),
+      _tableRowBuilder("Grand Total", "Rs. 253"),
+    ];
+  }
+_tableBuilder1() {
+    return [
+      _tableRowBuilder("ID", "C123458"),
+      _tableRowBuilder("Name", "Raju Singh"),
+      _tableRowBuilder(
+          "Mobile No.", "9564862354"),
     ];
   }
 
